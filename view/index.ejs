@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+    <section id="formSection" class="container">
+        <h2 class="text-dark text-center my-3">Sign Up</h2>
+        <form action="/participate" method="post" enctype="multipart/form-data" class="bg-secondary p-4 text-light">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" name="phone" id="phone">
+            </div>
+            <div class="mb-3">
+              <label for="">Sport </label>
+              <br>
+              <input type="radio" name="topic" id="Basketball" value="Basketball"> Basketball
+              <input type="radio" name="topic" id="Soccer" value="Soccer">Soccer
+              <input type="radio" name="topic" id="Golf" value="Golf"> Golf
+              <input type="radio" name="topic" id="Tennis" value="Tennis"> Tennis
+              <input type="radio" name="topic" id="Running" value="Running"> Running
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Photograph</label>
+                <input class="form-control" name="photo" type="file" id="photo" multiple>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a href="/participants">
+            <button class="btn btn-outline-primary m-5">VIEW PARTICIPANTS >></button>
+        </a>
+          
+    </section> 
+</body>
+</html>
